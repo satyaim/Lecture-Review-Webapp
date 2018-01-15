@@ -1,0 +1,82 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="att-style.css"/>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <script type="text/javascript" src="min.js"></script>
+      <title>LEC REVIEW</title>
+    </head>
+
+    <body>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="jq.min.js"></script>
+      <script type="text/javascript" src="materialize.min.js"></script>
+      <script type="text/javascript" src="att-action.js"></script>
+      <!-- 92 Attendee -->
+      <div class="card-panel black" id="attendee">
+        <!-- Lecturer Badge -->
+        <a id="lec" class="btn-floating waves-effect waves-light cyan btn-sym-lec" onclick="role_att();"><i class="material-icons">airline_seat_recline_normal</i></a>
+        <!-- Role Lecturer -->
+        <div class="tap-target attendee-ttarget cyan black-text" data-activates="lec">
+          <div class="tap-target-content">
+            <h5>Current Role: </h5>
+            <p>Attendee</p>
+          </div>
+        </div>
+        <div class="rating">
+          <div class="rateme cyan-text">Rating Review :</div>
+          <div class="rate">
+            <i class="material-icons star-0 amber-text">star_border</i>
+            <i class="material-icons star-1 amber-text">star_border</i>
+            <i class="material-icons star-2 amber-text">star_border</i>
+            <i class="material-icons star-3 amber-text">star_border</i>
+            <i class="material-icons star-4 amber-text">star_border</i>
+            <span class="amber-text" id="total" style="margin-left: 2vw;">0</span><span class="amber-text" id="ob">/</span><span class="amber-text" id="num">0</span>
+          </div>
+          <div class="input-field col s6 ratept">
+            <input id="points" type="number" class="validate cyan-text" min="1" max="5">
+            <label for="points" class="cyan-text">Rating</label>
+            <a class="waves-effect waves-light btn black cyan-text btn-rate" onclick="rate();">Rate</a>
+          </div>
+        </div>
+        <div class="yesno">
+          <div class="ynme cyan-text">Yes/No Review :</div>
+          <div class="yn">
+            <i class="material-icons thumbs green-text">thumb_up</i><span class="green-text" id="yes_count" style="margin-left: 2vw; margin-right: 2vw;">0</span>
+            <i class="material-icons thumbs red-text">thumb_down</i><span class="red-text" id="no_count" style="margin-left: 2vw; margin-right: 2vw;">0</span>
+          </div>
+            <form>
+              <span>
+                <input name="yn" type="radio" id="yes" />
+                <label for="yes" class="cyan-text">Yes</label>
+              </span>
+              <span>
+                <input name="yn" type="radio" id="no" />
+                <label for="no" class="cyan-text">No</label>
+              </span>
+              <a class="waves-effect waves-light btn black cyan-text btn-submit" onclick="y_n();">Submit</a>
+            </form>
+        </div>
+      </div>
+      <!-- FOOTER -->
+      <footer class="page-footer black">
+        <div class="footer-copyright cyan-text">
+          CODING CLUB | APOGEE'18
+        </div>
+      </footer>
+      <!-- DEVELOPER -->
+      <a id="developer" class="waves-effect waves-light btn btn-floating cyan" onclick="developer();"><i class="material-icons">polymer</i></a>
+      <!-- Tap Target Structure -->
+      <div class="tap-target developer-ttarget cyan black-text" data-activates="developer">
+        <div class="tap-target-content">
+          <h5>Developed By: </h5>
+          <p>Satyavrat Sharma</p>
+        </div>
+      </div>
+    </body>
+  </html>

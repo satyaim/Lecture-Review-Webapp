@@ -1,0 +1,84 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="lec-style.css"/>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <script type="text/javascript" src="min.js"></script>
+      <title>LEC REVIEW</title>
+    </head>
+
+    <body>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="jq.min.js"></script>
+      <script type="text/javascript" src="materialize.min.js"></script>
+      <script type="text/javascript" src="lec-action.js"></script>
+      <!-- 92 Lecturer -->
+      <div class="card-panel black" id="lecturer">
+        <!-- Lecturer Badge -->
+        <a id="lec" class="btn-floating waves-effect waves-light cyan btn-sym-lec" onclick="role_lec();"><i class="material-icons">record_voice_over</i></a>
+        <!-- Role Lecturer -->
+        <div class="tap-target lecturer-ttarget cyan black-text" data-activates="lec">
+          <div class="tap-target-content">
+            <h5>Current Role: </h5>
+            <p>Lecturer</p>
+          </div>
+        </div>
+        <!-- Heading -->
+        <div class="header"><h4 class="cyan-text">LECTURE REVIEW WEBAPP</h4></div>
+        <!-- Rating Switch -->
+        <div class="switch cyan-text">
+          Rating Review: 
+          <label class="cyan-text switch-label">
+            Off
+            <input type="checkbox" onchange="ratingrev(this);">
+            <span class="lever"></span>
+            On
+          </label>
+        </div>
+        <!-- Rating -->
+        <div class="rate">
+          <i class="material-icons star-0 amber-text">star_border</i>
+          <i class="material-icons star-1 amber-text">star_border</i>
+          <i class="material-icons star-2 amber-text">star_border</i>
+          <i class="material-icons star-3 amber-text">star_border</i>
+          <i class="material-icons star-4 amber-text">star_border</i>
+          <span class="amber-text" id="total" style="margin-left: 2vw;">0</span><span class="amber-text" id="ob">/</span><span class="amber-text" id="num">0</span>
+        </div>
+        <!-- Yes/No Switch -->
+        <div class="switch cyan-text">
+          Yes/No Review: 
+          <label class="cyan-text switch-label">
+            Off
+            <input type="checkbox" onchange="yesnorev(this);">
+            <span class="lever"></span>
+            On
+          </label>
+        </div>
+      <!-- Yes/No -->
+      <div class="yesno">
+          <i class="material-icons thumbs green-text">thumb_up</i><span class="green-text" id="yes_count" style="margin-left: 2vw; margin-right: 2vw;">0</span>
+          <i class="material-icons thumbs red-text">thumb_down</i><span class="red-text" id="no_count" style="margin-left: 2vw; margin-right: 2vw;">0</span>
+      </div>  
+      </div>
+      <!-- FOOTER -->
+      <footer class="page-footer black">
+        <div class="footer-copyright cyan-text">
+          CODING CLUB | APOGEE'18
+        </div>
+      </footer>
+      <!-- DEVELOPER -->
+      <a id="developer" class="waves-effect waves-light btn btn-floating cyan" onclick="developer();"><i class="material-icons">polymer</i></a>
+      <!-- Tap Target Structure -->
+      <div class="tap-target developer-ttarget cyan black-text" data-activates="developer">
+        <div class="tap-target-content">
+          <h5>Developed By: </h5>
+          <p>Satyavrat Sharma</p>
+        </div>
+      </div>
+    </body>
+  </html>

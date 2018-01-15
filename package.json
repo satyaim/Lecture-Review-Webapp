@@ -1,0 +1,29 @@
+{
+  "name": "lecrevapp",
+  "version": "1.0.0",
+  "description": "attendees give live review of ongoing lectures",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satyaim/Lecture-Review-Webapp.git"
+  },
+  "keywords": [
+    "node",
+    "lecture",
+    "review",
+    "socket"
+  ],
+  "author": "satyaim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/satyaim/Lecture-Review-Webapp/issues"
+  },
+  "homepage": "https://github.com/satyaim/Lecture-Review-Webapp#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "socketio": "^1.0.0"
+  }
+}
