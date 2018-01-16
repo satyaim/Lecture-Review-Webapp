@@ -1,8 +1,8 @@
 body{ max-height: 100vh; max-width: 100vw; }
 .header{ text-align: center; }
 #lecturer{ height: calc( 92vh - 2px ); width: 100vw; max-width: 100vw; max-height: 92vh; margin: 0;}
-#developer{position: fixed; top: 93vh; right: 4vw;}
-[class*="btn-sym-"]{position: fixed; top: 93vh; left: 4vw;}
+#developer{position: fixed; bottom: 1vh; right: 4vw;}
+[class*="btn-sym-"]{position: fixed; bottom: 1vh; left: 4vw;}
 .buttons{ width: 100vw; height: 40vh;  align-items: center; justify-content: center; display: flex; flex-direction: column;}
 .switch{ display: flex; align-items: center; justify-content: space-evenly; margin-top: 2vh;}
 .rate,.yesno{ display: none; align-items: center; justify-content: center; margin-top: 2vh;}
