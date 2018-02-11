@@ -6,7 +6,7 @@ var app= express();
 
 app.use(express.static("./assets"));
 
-app.get("/lecturer",function(req,res){
+app.get("/lecxyz",function(req,res){
 	res.sendfile("lecturer.html");
 });
 
@@ -67,6 +67,20 @@ io.on("connection",function(socket){
 		io.sockets.emit("yn",{
 			yes: yes,
 			no: no
+		});
+	});
+	socket.on("doubts",function(data){
+		console.log("doubts");
+		socket.broadcast.emit("doubts",data);
+		if(data.status=="on"){
+			
+		}
+	});
+	socket.on("doubt",function(data){
+		console.log("got a doubt");
+		doubt= data.doubt;
+		io.sockets.emit("doubt",{
+			doubt: doubt
 		});
 	});
 });

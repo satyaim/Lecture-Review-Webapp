@@ -108,3 +108,31 @@ socket.on("yn",function(data){
 	document.getElementById("yes_count").innerHTML=yes;
 	document.getElementById("no_count").innerHTML=no;
 });
+
+var socket= io.connect(url);
+socket.on("doubts", function(data){
+	if(data.status=="off"){
+		console.log("Turn Off Doubts");
+		document.getElementsByClassName("doubts")[0].style.display="none";
+		Materialize.toast("Doubts Turned Off", 2000, 'toast-todo');
+	}
+	else if(data.status=="on"){
+		console.log("Turn On Doubts");
+		document.getElementsByClassName("doubts")[0].style.display="flex";
+		Materialize.toast("Doubts Review Started", 2000, 'toast-todo');
+	}
+});
+
+function doubt(){
+	var doubt= document.getElementById('doubt').value;
+	if(doubt!=""){
+		Materialize.toast("Submitting Doubt", 2000, 'toast-todo');
+		socket.emit("doubt",{
+				doubt: doubt
+		});
+		document.getElementById('doubt').value="";
+	}
+	else {
+		Materialize.toast("Enter Doubt First", 2000, 'toast-todo');
+	}
+}

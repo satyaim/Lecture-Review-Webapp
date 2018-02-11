@@ -95,3 +95,27 @@ socket.on("yn",function(data){
 	document.getElementById("yes_count").innerHTML=yes;
 	document.getElementById("no_count").innerHTML=no;
 });
+
+function doubt(checkbox){
+	if(checkbox.checked == true){
+		console.log("checked");
+		socket.emit("doubts",{
+			status: "on"
+		});
+		document.getElementById("doubts").innerHTML='<span class="doubt white-text"><i class="material-icons">chevron_right</i>Doubts will be displayed here!</span>';
+		document.getElementById("doubts").style.display="flex";
+	}
+	else{
+        console.log("unchecked");
+        socket.emit("doubts",{
+			status: "off"
+		});
+		document.getElementById("doubts").style.display="none";
+	}
+}
+
+socket.on("doubt",function(data){
+	console.log(data);
+	document.getElementById("doubts").innerHTML+='<span class="doubt white-text"><i class="material-icons">chevron_right</i>'+data.doubt+'</span>';
+
+});

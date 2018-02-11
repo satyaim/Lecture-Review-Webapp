@@ -60,11 +60,25 @@
             On
           </label>
         </div>
-      <!-- Yes/No -->
-      <div class="yesno">
-          <i class="material-icons thumbs green-text">thumb_up</i><span class="green-text" id="yes_count" style="margin-left: 2vw; margin-right: 2vw;">0</span>
-          <i class="material-icons thumbs red-text">thumb_down</i><span class="red-text" id="no_count" style="margin-left: 2vw; margin-right: 2vw;">0</span>
-      </div>  
+        <!-- Yes/No -->
+        <div class="yesno">
+            <i class="material-icons thumbs green-text">thumb_up</i><span class="green-text" id="yes_count" style="margin-left: 2vw; margin-right: 2vw;">0</span>
+            <i class="material-icons thumbs red-text">thumb_down</i><span class="red-text" id="no_count" style="margin-left: 2vw; margin-right: 2vw;">0</span>
+        </div>
+        <!-- Doubts Switch -->
+        <div class="switch cyan-text">
+          Ask Doubts: 
+          <label class="cyan-text switch-label">
+            Off
+            <input type="checkbox" onchange="doubt(this);">
+            <span class="lever"></span>
+            On
+          </label>
+        </div>
+        <!-- Doubt -->
+        <div id="doubts">
+            <span class="doubt white-text"><i class="material-icons cyan-text">chevron_right</i>Who should we play with?</span>
+        </div>  
       </div>
       <!-- FOOTER -->
       <footer class="page-footer black">
