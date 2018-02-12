@@ -18,8 +18,8 @@ var points_sum=0;
 var response_no=0;
 var yes=0;
 var no=0;
-//var url= "http://127.0.0.1:3000/";
-var url="https://lecreview.herokuapp.com/";
+var url= "http://127.0.0.1:3000/";
+//var url="https://lecreview.herokuapp.com/";
 var socket= io.connect(url);
 function ratingrev(checkbox){
 	if(checkbox.checked == true){
